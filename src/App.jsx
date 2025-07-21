@@ -30,11 +30,19 @@ export default function App() {
       </header>
 
       <main style={styles.main}>
-        <h2>About This Site</h2>
-        <p>Contents on this site we do not own any of them.</p>
-        <p>Content credits are given to the creators and studios.</p>
-        <p>We do not sell or rent any content here.</p>
-        <p>Contents are shared under Fair Usage policy. We do not gain profit from them.</p>
+        <h2>Featured Video</h2>
+        <div style={styles.videoWrapper}>
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Embedded Video"
+            frameBorder="0"
+            allowFullScreen
+            style={styles.iframe}
+          ></iframe>
+        </div>
+        <p style={styles.description}>
+          This is a description of the featured video. Replace this text with your actual content.
+        </p>
       </main>
 
       <footer style={styles.footer}>
@@ -49,6 +57,7 @@ const styles = {
     fontFamily: 'Arial, sans-serif',
     margin: '0 auto',
     maxWidth: '1000px',
+    width: '100%',
     padding: '0',
   },
   header: {
@@ -60,9 +69,11 @@ const styles = {
   banner: {
     width: '100%',
     height: 'auto',
+    display: 'block',
   },
   logoContainer: {
     display: 'flex',
+    flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'center',
     padding: '1rem 0',
@@ -81,6 +92,7 @@ const styles = {
   },
   nav: {
     display: 'flex',
+    flexWrap: 'wrap',
     justifyContent: 'center',
     gap: '1rem',
     paddingBottom: '1rem',
@@ -93,6 +105,27 @@ const styles = {
   main: {
     minHeight: '300px',
     padding: '2rem',
+    textAlign: 'center',
+  },
+  videoWrapper: {
+    position: 'relative',
+    width: '100%',
+    maxWidth: '800px',
+    paddingBottom: '56.25%', // 16:9 aspect ratio
+    height: 0,
+    margin: '1rem auto',
+  },
+  iframe: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    border: 0,
+  },
+  description: {
+    maxWidth: '800px',
+    margin: '1rem auto',
   },
   footer: {
     marginTop: '2rem',
