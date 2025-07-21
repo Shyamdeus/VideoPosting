@@ -6,7 +6,7 @@ export default function App() {
       <header style={styles.header}>
         {/* Banner Image */}
         <img
-          src="src/images/maxresdefault.jpg"
+          src="images/maxresdefault.jpg"
           alt="Banner"
           style={styles.banner}
         />
@@ -14,7 +14,7 @@ export default function App() {
         {/* Logo + Title */}
         <div style={styles.logoContainer}>
           <img
-            src="src/images/bluebird.png"
+            src="/home/Shyamdeus/VideoPosting/images/bluebird.png"
             alt="Logo"
             style={styles.logo}
           />
@@ -25,16 +25,23 @@ export default function App() {
         <nav style={styles.nav}>
           <a href="#" style={styles.link}>Home</a>
           <a href="#" style={styles.link}>Dubbed Drama</a>
-          <a href="#" style={styles.link}>Dubbed Movies</a>
+          <a href="/home/Shyamdeus/VideoPosting/pages/defaultpage.jsx" style={styles.link}>Dubbed Movies</a>
         </nav>
       </header>
 
       <main style={styles.main}>
-        <h2>About This Site</h2>
-        <p>Contents on this site we do not own any of them.</p>
-        <p>Content credits are given to the creators and studios.</p>
-        <p>We do not sell or rent any content here.</p>
-        <p>Contents are shared under Fair Usage policy. We do not gain profit from them.</p>
+        <div style={styles.videoWrapper}>
+          <iframe
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            title="Embedded Video"
+            frameBorder="0"
+            allowFullScreen
+            style={styles.iframe}
+          ></iframe>
+        </div>
+        <p style={styles.description}>
+          This is a description of the video. You can add any details here.
+        </p>
       </main>
 
       <footer style={styles.footer}>
