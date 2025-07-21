@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function App() {
   return (
-    <div style={styles.container}>
+    <div style={styles.wrapper}>
       <header style={styles.header}>
         {/* Banner Image */}
         <img
@@ -53,30 +53,29 @@ export default function App() {
 }
 
 const styles = {
-  container: {
-    fontFamily: 'Arial, sans-serif',
-    margin: '0 auto',
-    maxWidth: '1000px',
-    width: '100%',
-    padding: '0',
+  wrapper: {
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    margin: 0,
   },
   header: {
     background: '#007bff',
     color: '#fff',
     textAlign: 'center',
-    borderBottom: '2px solid #eee',
+    width: '100%',
   },
   banner: {
+    display: 'block',
     width: '100%',
     height: 'auto',
-    display: 'block',
   },
   logoContainer: {
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: '1rem 0',
+    padding: '1rem',
   },
   logo: {
     width: '80px',
@@ -95,7 +94,7 @@ const styles = {
     flexWrap: 'wrap',
     justifyContent: 'center',
     gap: '1rem',
-    paddingBottom: '1rem',
+    padding: '1rem 0',
   },
   link: {
     color: '#fff',
@@ -103,15 +102,17 @@ const styles = {
     fontWeight: 'bold',
   },
   main: {
-    minHeight: '300px',
-    padding: '2rem',
+    flex: 1,
+    padding: '2rem 1rem',
     textAlign: 'center',
+    width: '100%',
+    boxSizing: 'border-box',
   },
   videoWrapper: {
     position: 'relative',
     width: '100%',
     maxWidth: '800px',
-    paddingBottom: '56.25%', // 16:9 aspect ratio
+    paddingBottom: '56.25%',
     height: 0,
     margin: '1rem auto',
   },
@@ -128,9 +129,9 @@ const styles = {
     margin: '1rem auto',
   },
   footer: {
-    marginTop: '2rem',
     borderTop: '2px solid #eee',
     padding: '1rem',
     textAlign: 'center',
+    width: '100%',
   },
 };
