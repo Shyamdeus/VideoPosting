@@ -14,7 +14,7 @@ export default function App() {
         {/* Logo + Title */}
         <div style={styles.logoContainer}>
           <img
-            src="https://via.placeholder.com/80"
+            src="/home/Shyamdeus/VideoPosting/images/bluebird.png"
             alt="Logo"
             style={styles.logo}
           />
