@@ -6,7 +6,7 @@ export default function App() {
       <header style={styles.header}>
         {/* Banner Image */}
         <img
-          src="public/images/maxresdefault.jpg"
+          src="/images/maxresdefault.jpg"
           alt="Banner"
           style={styles.banner}
         />
@@ -14,7 +14,7 @@ export default function App() {
         {/* Logo + Title */}
         <div style={styles.logoContainer}>
           <img
-            src="public/images/bluebird.png"
+            src="/images/bluebird.png"
             alt="Logo"
             style={styles.logo}
           />
