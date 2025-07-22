@@ -3,10 +3,7 @@ import './responsive.css';
 
 export default function App() {
   useEffect(() => {
-    // ✅ Use same working key for both ads
-    const adKey = '3f8144b431f600ec621cc5cffe2afa15';
-
-    // Sidebar ad
+    // Sidebar SMALL ad (160x300)
     const sidebarAd = document.getElementById('sidebar-ad');
     if (sidebarAd) {
       const script1 = document.createElement('script');
@@ -14,7 +11,7 @@ export default function App() {
       script1.async = true;
       script1.innerHTML = `
         atOptions = {
-          'key' : '${adKey}',
+          'key' : 'ee03ee4fc43f0e28a144abb0f0f8acd9',
           'format' : 'iframe',
           'height' : 300,
           'width' : 160,
@@ -26,11 +23,11 @@ export default function App() {
       const script1Src = document.createElement('script');
       script1Src.type = 'text/javascript';
       script1Src.async = true;
-      script1Src.src = `//www.highperformanceformat.com/${adKey}/invoke.js`;
+      script1Src.src = '//www.highperformanceformat.com/ee03ee4fc43f0e28a144abb0f0f8acd9/invoke.js';
       sidebarAd.appendChild(script1Src);
     }
 
-    // Bottom ad
+    // Bottom BIG ad (728x90)
     const bottomAd = document.getElementById('bottom-ad');
     if (bottomAd) {
       const script2 = document.createElement('script');
@@ -38,7 +35,7 @@ export default function App() {
       script2.async = true;
       script2.innerHTML = `
         atOptions = {
-          'key' : '${adKey}',
+          'key' : '3f8144b431f600ec621cc5cffe2afa15',
           'format' : 'iframe',
           'height' : 90,
           'width' : 728,
@@ -50,7 +47,7 @@ export default function App() {
       const script2Src = document.createElement('script');
       script2Src.type = 'text/javascript';
       script2Src.async = true;
-      script2Src.src = `//www.highperformanceformat.com/${adKey}/invoke.js`;
+      script2Src.src = '//www.highperformanceformat.com/3f8144b431f600ec621cc5cffe2afa15/invoke.js';
       bottomAd.appendChild(script2Src);
     }
 
@@ -103,7 +100,7 @@ export default function App() {
               <a href="#" className="sidebar-link">Dubbed Movies</a>
             </nav>
             
-            {/* ✅ Sidebar Ad */}
+            {/* ✅ Sidebar SMALL Ad */}
             <div id="sidebar-ad"></div>
           </aside>
 
@@ -136,7 +133,7 @@ export default function App() {
         </div>
       </main>
 
-      {/* ✅ Bottom Ad */}
+      {/* ✅ Bottom BIG Ad */}
       <div id="bottom-ad"></div>
 
       <footer className="footer">
