@@ -1,7 +1,52 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './responsive.css';
 
 export default function App() {
+  useEffect(() => {
+    // Sidebar ad script
+    const script1 = document.createElement('script');
+    script1.type = 'text/javascript';
+    script1.async = true;
+    script1.innerHTML = `
+      atOptions = {
+        'key' : 'ee03ee4fc43f0e28a144abb0f0f8acd9',
+        'format' : 'iframe',
+        'height' : 300,
+        'width' : 160,
+        'params' : {}
+      };
+    `;
+    document.getElementById('sidebar-ad').appendChild(script1);
+
+    const script1Src = document.createElement('script');
+    script1Src.type = 'text/javascript';
+    script1Src.async = true;
+    script1Src.src = '//www.highperformanceformat.com/ee03ee4fc43f0e28a144abb0f0f8acd9/invoke.js';
+    document.getElementById('sidebar-ad').appendChild(script1Src);
+
+    // Bottom ad script
+    const script2 = document.createElement('script');
+    script2.type = 'text/javascript';
+    script2.async = true;
+    script2.innerHTML = `
+      atOptions = {
+        'key' : '3f8144b431f600ec621cc5cffe2afa15',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    `;
+    document.getElementById('bottom-ad').appendChild(script2);
+
+    const script2Src = document.createElement('script');
+    script2Src.type = 'text/javascript';
+    script2Src.async = true;
+    script2Src.src = '//www.highperformanceformat.com/3f8144b431f600ec621cc5cffe2afa15/invoke.js';
+    document.getElementById('bottom-ad').appendChild(script2Src);
+
+  }, []);
+
   return (
     <div className="container">
       <header className="header">
@@ -49,25 +94,8 @@ export default function App() {
               <a href="#" className="sidebar-link">Dubbed Movies</a>
             </nav>
             
-            {/* Ad Banner */}
-            <div className="ad-banner">
-              <div 
-                dangerouslySetInnerHTML={{
-                  __html: `
-                    <script type="text/javascript">
-                      atOptions = {
-                        'key' : 'ee03ee4fc43f0e28a144abb0f0f8acd9',
-                        'format' : 'iframe',
-                        'height' : 300,
-                        'width' : 160,
-                        'params' : {}
-                      };
-                    </script>
-                    <script type="text/javascript" src="//www.highperformanceformat.com/ee03ee4fc43f0e28a144abb0f0f8acd9/invoke.js"></script>
-                  `
-                }}
-              />
-            </div>
+            {/* ✅ Sidebar Ad Banner */}
+            <div id="sidebar-ad"></div>
           </aside>
 
           {/* Video Content */}
@@ -101,25 +129,8 @@ export default function App() {
         </div>
       </main>
 
-      {/* Bottom Ad Banner */}
-      <div className="bottom-ad-banner">
-        <div 
-          dangerouslySetInnerHTML={{
-            __html: `
-              <script type="text/javascript">
-                atOptions = {
-                  'key' : '3f8144b431f600ec621cc5cffe2afa15',
-                  'format' : 'iframe',
-                  'height' : 90,
-                  'width' : 728,
-                  'params' : {}
-                };
-              </script>
-              <script type="text/javascript" src="//www.highperformanceformat.com/3f8144b431f600ec621cc5cffe2afa15/invoke.js"></script>
-            `
-          }}
-        />
-      </div>
+      {/* ✅ Bottom Ad Banner */}
+      <div id="bottom-ad"></div>
 
       <footer className="footer">
         <p>© 2025 My Website Dubbed Dramas</p>
