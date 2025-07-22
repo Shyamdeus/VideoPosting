@@ -31,18 +31,41 @@ export default function App() {
       </header>
 
       <main className="main">
-        <div className="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Embedded Video"
-            frameBorder="0"
-            allowFullScreen
-            className="iframe"
-          ></iframe>
+        <div className="content-layout">
+          {/* Left Sidebar */}
+          <aside className="sidebar">
+            <div className="search-container">
+              <input 
+                type="text" 
+                placeholder="Search..." 
+                className="search-input"
+              />
+              <button className="search-button">Search</button>
+            </div>
+            
+            <nav className="sidebar-nav">
+              <a href="#" className="sidebar-link active">Home</a>
+              <a href="#" className="sidebar-link">Dubbed Drama</a>
+              <a href="#" className="sidebar-link">Dubbed Movies</a>
+            </nav>
+          </aside>
+
+          {/* Video Content */}
+          <div className="video-content">
+            <div className="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Embedded Video"
+                frameBorder="0"
+                allowFullScreen
+                className="iframe"
+              ></iframe>
+            </div>
+            <p className="description">
+              This is a description of the video. You can add any details here.
+            </p>
+          </div>
         </div>
-        <p className="description">
-          This is a description of the video. You can add any details here.
-        </p>
       </main>
 
       <footer className="footer">
