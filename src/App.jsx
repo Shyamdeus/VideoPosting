@@ -3,47 +3,56 @@ import './responsive.css';
 
 export default function App() {
   useEffect(() => {
-    // Sidebar ad script
-    const script1 = document.createElement('script');
-    script1.type = 'text/javascript';
-    script1.async = true;
-    script1.innerHTML = `
-      atOptions = {
-        'key' : 'ee03ee4fc43f0e28a144abb0f0f8acd9',
-        'format' : 'iframe',
-        'height' : 300,
-        'width' : 160,
-        'params' : {}
-      };
-    `;
-    document.getElementById('sidebar-ad').appendChild(script1);
+    // ✅ Use same working key for both ads
+    const adKey = '3f8144b431f600ec621cc5cffe2afa15';
 
-    const script1Src = document.createElement('script');
-    script1Src.type = 'text/javascript';
-    script1Src.async = true;
-    script1Src.src = '//www.highperformanceformat.com/ee03ee4fc43f0e28a144abb0f0f8acd9/invoke.js';
-    document.getElementById('sidebar-ad').appendChild(script1Src);
+    // Sidebar ad
+    const sidebarAd = document.getElementById('sidebar-ad');
+    if (sidebarAd) {
+      const script1 = document.createElement('script');
+      script1.type = 'text/javascript';
+      script1.async = true;
+      script1.innerHTML = `
+        atOptions = {
+          'key' : '${adKey}',
+          'format' : 'iframe',
+          'height' : 300,
+          'width' : 160,
+          'params' : {}
+        };
+      `;
+      sidebarAd.appendChild(script1);
 
-    // Bottom ad script
-    const script2 = document.createElement('script');
-    script2.type = 'text/javascript';
-    script2.async = true;
-    script2.innerHTML = `
-      atOptions = {
-        'key' : '3f8144b431f600ec621cc5cffe2afa15',
-        'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
-        'params' : {}
-      };
-    `;
-    document.getElementById('bottom-ad').appendChild(script2);
+      const script1Src = document.createElement('script');
+      script1Src.type = 'text/javascript';
+      script1Src.async = true;
+      script1Src.src = `//www.highperformanceformat.com/${adKey}/invoke.js`;
+      sidebarAd.appendChild(script1Src);
+    }
 
-    const script2Src = document.createElement('script');
-    script2Src.type = 'text/javascript';
-    script2Src.async = true;
-    script2Src.src = '//www.highperformanceformat.com/3f8144b431f600ec621cc5cffe2afa15/invoke.js';
-    document.getElementById('bottom-ad').appendChild(script2Src);
+    // Bottom ad
+    const bottomAd = document.getElementById('bottom-ad');
+    if (bottomAd) {
+      const script2 = document.createElement('script');
+      script2.type = 'text/javascript';
+      script2.async = true;
+      script2.innerHTML = `
+        atOptions = {
+          'key' : '${adKey}',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      `;
+      bottomAd.appendChild(script2);
+
+      const script2Src = document.createElement('script');
+      script2Src.type = 'text/javascript';
+      script2Src.async = true;
+      script2Src.src = `//www.highperformanceformat.com/${adKey}/invoke.js`;
+      bottomAd.appendChild(script2Src);
+    }
 
   }, []);
 
@@ -94,13 +103,12 @@ export default function App() {
               <a href="#" className="sidebar-link">Dubbed Movies</a>
             </nav>
             
-            {/* ✅ Sidebar Ad Banner */}
+            {/* ✅ Sidebar Ad */}
             <div id="sidebar-ad"></div>
           </aside>
 
           {/* Video Content */}
           <div className="video-content">
-            {/* Top Section with Text and Logo */}
             <div className="video-top-section">
               <p className="video-section-text">Welcome to our premium streaming platform - Your destination for the best dubbed content!</p>
               <img src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop" alt="Top Logo" className="video-section-logo" />
@@ -116,7 +124,6 @@ export default function App() {
               ></iframe>
             </div>
 
-            {/* Bottom Section with Text and Logo */}
             <div className="video-bottom-section">
               <p className="video-section-text">Thank you for choosing us - Enjoy unlimited entertainment with high-quality dubbed content!</p>
               <img src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop" alt="Bottom Logo" className="video-section-logo" />
@@ -129,7 +136,7 @@ export default function App() {
         </div>
       </main>
 
-      {/* ✅ Bottom Ad Banner */}
+      {/* ✅ Bottom Ad */}
       <div id="bottom-ad"></div>
 
       <footer className="footer">
