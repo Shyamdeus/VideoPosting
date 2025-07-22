@@ -50,7 +50,6 @@ export default function App() {
       script2Src.src = '//www.highperformanceformat.com/3f8144b431f600ec621cc5cffe2afa15/invoke.js';
       bottomAd.appendChild(script2Src);
     }
-
   }, []);
 
   return (
@@ -80,8 +79,8 @@ export default function App() {
 
       <main className="main">
         <div className="content-layout">
-          {/* ✅ Sidebar */}
-          <div className="sidebar-container">
+          {/* ✅ LEFT COLUMN: sidebar + ad BELOW */}
+          <div className="left-column">
             <aside className="sidebar">
               <div className="search-container">
                 <input 
@@ -91,7 +90,7 @@ export default function App() {
                 />
                 <button className="search-button">Search</button>
               </div>
-              
+
               <nav className="sidebar-nav">
                 <a href="#" className="sidebar-link active">Home</a>
                 <a href="#" className="sidebar-link">Dubbed Drama</a>
@@ -99,11 +98,10 @@ export default function App() {
               </nav>
             </aside>
 
-            {/* ✅ Small ad below sidebar */}
             <div id="small-ad-below-sidebar"></div>
           </div>
 
-          {/* ✅ Main video content */}
+          {/* ✅ RIGHT COLUMN: Video content */}
           <div className="video-content">
             <div className="video-top-section">
               <p className="video-section-text">
