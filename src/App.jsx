@@ -4,6 +4,26 @@ import './responsive.css';
 export default function App() {
   return (
     <div className="wrapper">
+      {/* Left Sidebar */}
+      <aside className="sidebar">
+        <div className="sidebar-content">
+          <div className="search-container">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="search-input"
+            />
+            <button className="search-button">🔍</button>
+          </div>
+          
+          <nav className="sidebar-nav">
+            <a href="#" className="sidebar-link active">Home</a>
+            <a href="#" className="sidebar-link">Dubbed Drama</a>
+            <a href="#" className="sidebar-link">Dubbed Movies</a>
+          </nav>
+        </div>
+      </aside>
+
       <header className="header">
         {/* Banner Image */}
         <img
@@ -22,15 +42,9 @@ export default function App() {
           <h1 className="title">My Home Page</h1>
         </div>
 
-        {/* Nav Bar */}
-        <nav className="nav">
-          <a href="#" className="nav-link">Home</a>
-          <a href="#" className="nav-link">Dubbed Drama</a>
-          <a href="#" className="nav-link">Dubbed Movies</a>
-        </nav>
       </header>
 
-      <main className="main">
+      <main className="main-content">
         <h2 className="section-title">Featured Video</h2>
         <div className="video-wrapper">
           <iframe
