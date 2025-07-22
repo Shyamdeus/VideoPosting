@@ -101,6 +101,26 @@ export default function App() {
         </div>
       </main>
 
+      {/* Bottom Ad Banner */}
+      <div className="bottom-ad-banner">
+        <div 
+          dangerouslySetInnerHTML={{
+            __html: `
+              <script type="text/javascript">
+                atOptions = {
+                  'key' : '3f8144b431f600ec621cc5cffe2afa15',
+                  'format' : 'iframe',
+                  'height' : 90,
+                  'width' : 728,
+                  'params' : {}
+                };
+              </script>
+              <script type="text/javascript" src="//www.highperformanceformat.com/3f8144b431f600ec621cc5cffe2afa15/invoke.js"></script>
+            `
+          }}
+        />
+      </div>
+
       <footer className="footer">
         <p>© 2025 My Website Dubbed Dramas</p>
       </footer>

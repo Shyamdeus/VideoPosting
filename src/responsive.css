@@ -235,6 +235,16 @@
   color: #333;
 }
 
+/* Bottom Ad Banner */
+.bottom-ad-banner {
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem 0;
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  background: #f8f9fa;
+}
+
 /* Footer */
 .footer {
   margin-top: 2rem;
