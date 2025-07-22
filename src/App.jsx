@@ -48,6 +48,26 @@ export default function App() {
               <a href="#" className="sidebar-link">Dubbed Drama</a>
               <a href="#" className="sidebar-link">Dubbed Movies</a>
             </nav>
+            
+            {/* Ad Banner */}
+            <div className="ad-banner">
+              <div 
+                dangerouslySetInnerHTML={{
+                  __html: `
+                    <script type="text/javascript">
+                      atOptions = {
+                        'key' : 'ee03ee4fc43f0e28a144abb0f0f8acd9',
+                        'format' : 'iframe',
+                        'height' : 300,
+                        'width' : 160,
+                        'params' : {}
+                      };
+                    </script>
+                    <script type="text/javascript" src="//www.highperformanceformat.com/ee03ee4fc43f0e28a144abb0f0f8acd9/invoke.js"></script>
+                  `
+                }}
+              />
+            </div>
           </aside>
 
           {/* Video Content */}

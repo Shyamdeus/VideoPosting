@@ -195,6 +195,14 @@
   color: white;
 }
 
+/* Ad Banner */
+.ad-banner {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #dee2e6;
+  text-align: center;
+}
+
 /* Video Content */
 .video-content {
   flex: 1;
