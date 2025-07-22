@@ -4,12 +4,6 @@ import './responsive.css';
 export default function App() {
   return (
     <div className="container">
-      {/* Top Section with Text and Logo */}
-      <div className="top-section">
-        <p className="top-text">Welcome to our premium streaming platform - Your destination for the best dubbed content!</p>
-        <img src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop" alt="Top Logo" className="section-logo" />
-      </div>
-
       <header className="header">
         {/* Banner Image */}
         <img
