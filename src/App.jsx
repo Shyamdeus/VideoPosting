@@ -3,9 +3,9 @@ import './responsive.css';
 
 export default function App() {
   useEffect(() => {
-    // Sidebar SMALL ad (160x300)
-    const sidebarAd = document.getElementById('sidebar-ad');
-    if (sidebarAd) {
+    // ✅ Small ad BELOW sidebar
+    const smallAd = document.getElementById('small-ad-below-sidebar');
+    if (smallAd) {
       const script1 = document.createElement('script');
       script1.type = 'text/javascript';
       script1.async = true;
@@ -18,16 +18,16 @@ export default function App() {
           'params' : {}
         };
       `;
-      sidebarAd.appendChild(script1);
+      smallAd.appendChild(script1);
 
       const script1Src = document.createElement('script');
       script1Src.type = 'text/javascript';
       script1Src.async = true;
       script1Src.src = '//www.highperformanceformat.com/ee03ee4fc43f0e28a144abb0f0f8acd9/invoke.js';
-      sidebarAd.appendChild(script1Src);
+      smallAd.appendChild(script1Src);
     }
 
-    // Bottom BIG ad (728x90)
+    // ✅ Bottom BIG ad
     const bottomAd = document.getElementById('bottom-ad');
     if (bottomAd) {
       const script2 = document.createElement('script');
@@ -56,14 +56,12 @@ export default function App() {
   return (
     <div className="container">
       <header className="header">
-        {/* Banner Image */}
         <img
           src="/images/maxresdefault.jpg"
           alt="Banner"
           className="banner"
         />
 
-        {/* Logo + Title */}
         <div className="logo-container">
           <img
             src="/images/bluebird.png"
@@ -73,7 +71,6 @@ export default function App() {
           <h1 className="title">My Home Page</h1>
         </div>
 
-        {/* Nav Bar */}
         <nav className="nav">
           <a href="#" className="link">Home</a>
           <a href="#" className="link">Dubbed Drama</a>
@@ -83,32 +80,40 @@ export default function App() {
 
       <main className="main">
         <div className="content-layout">
-          {/* Left Sidebar */}
-          <aside className="sidebar">
-            <div className="search-container">
-              <input 
-                type="text" 
-                placeholder="Search..." 
-                className="search-input"
-              />
-              <button className="search-button">Search</button>
-            </div>
-            
-            <nav className="sidebar-nav">
-              <a href="#" className="sidebar-link active">Home</a>
-              <a href="#" className="sidebar-link">Dubbed Drama</a>
-              <a href="#" className="sidebar-link">Dubbed Movies</a>
-            </nav>
-            
-            {/* ✅ Sidebar SMALL Ad */}
-            <div id="sidebar-ad"></div>
-          </aside>
+          {/* ✅ Sidebar */}
+          <div className="sidebar-container">
+            <aside className="sidebar">
+              <div className="search-container">
+                <input 
+                  type="text" 
+                  placeholder="Search..." 
+                  className="search-input"
+                />
+                <button className="search-button">Search</button>
+              </div>
+              
+              <nav className="sidebar-nav">
+                <a href="#" className="sidebar-link active">Home</a>
+                <a href="#" className="sidebar-link">Dubbed Drama</a>
+                <a href="#" className="sidebar-link">Dubbed Movies</a>
+              </nav>
+            </aside>
 
-          {/* Video Content */}
+            {/* ✅ Small ad below sidebar */}
+            <div id="small-ad-below-sidebar"></div>
+          </div>
+
+          {/* ✅ Main video content */}
           <div className="video-content">
             <div className="video-top-section">
-              <p className="video-section-text">Welcome to our premium streaming platform - Your destination for the best dubbed content!</p>
-              <img src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop" alt="Top Logo" className="video-section-logo" />
+              <p className="video-section-text">
+                Welcome to our premium streaming platform - Your destination for the best dubbed content!
+              </p>
+              <img 
+                src="https://images.pexels.com/photos/1591056/pexels-photo-1591056.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop"
+                alt="Top Logo"
+                className="video-section-logo"
+              />
             </div>
 
             <div className="video-wrapper">
@@ -122,8 +127,14 @@ export default function App() {
             </div>
 
             <div className="video-bottom-section">
-              <p className="video-section-text">Thank you for choosing us - Enjoy unlimited entertainment with high-quality dubbed content!</p>
-              <img src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop" alt="Bottom Logo" className="video-section-logo" />
+              <p className="video-section-text">
+                Thank you for choosing us - Enjoy unlimited entertainment with high-quality dubbed content!
+              </p>
+              <img 
+                src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop"
+                alt="Bottom Logo"
+                className="video-section-logo"
+              />
             </div>
 
             <p className="description">
@@ -133,7 +144,7 @@ export default function App() {
         </div>
       </main>
 
-      {/* ✅ Bottom BIG Ad */}
+      {/* ✅ Bottom BIG ad */}
       <div id="bottom-ad"></div>
 
       <footer className="footer">
