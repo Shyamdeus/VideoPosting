@@ -3,27 +3,7 @@ import './responsive.css';
 
 export default function App() {
   return (
-    <div className="wrapper">
-      {/* Left Sidebar */}
-      <aside className="sidebar">
-        <div className="sidebar-content">
-          <div className="search-container">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="search-input"
-            />
-            <button className="search-button">🔍</button>
-          </div>
-          
-          <nav className="sidebar-nav">
-            <a href="#" className="sidebar-link active">Home</a>
-            <a href="#" className="sidebar-link">Dubbed Drama</a>
-            <a href="#" className="sidebar-link">Dubbed Movies</a>
-          </nav>
-        </div>
-      </aside>
-
+    <div className="container">
       <header className="header">
         {/* Banner Image */}
         <img
@@ -42,21 +22,26 @@ export default function App() {
           <h1 className="title">My Home Page</h1>
         </div>
 
+        {/* Nav Bar */}
+        <nav className="nav">
+          <a href="#" className="link">Home</a>
+          <a href="#" className="link">Dubbed Drama</a>
+          <a href="#" className="link">Dubbed Movies</a>
+        </nav>
       </header>
 
-      <main className="main-content">
-        <h2 className="section-title">Featured Video</h2>
+      <main className="main">
         <div className="video-wrapper">
           <iframe
             src="https://www.youtube.com/embed/dQw4w9WgXcQ"
             title="Embedded Video"
             frameBorder="0"
             allowFullScreen
-            className="video-iframe"
+            className="iframe"
           ></iframe>
         </div>
         <p className="description">
-          This is a description of the featured video. Replace this text with your actual content.
+          This is a description of the video. You can add any details here.
         </p>
       </main>
 
