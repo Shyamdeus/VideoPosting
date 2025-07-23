@@ -79,9 +79,9 @@ export default function App() {
 
       <main className="main">
         <div className="content-layout">
-          {/* ✅ LEFT COLUMN: sidebar + ad BELOW */}
+          {/* ✅ LEFT COLUMN: sticky sidebar + ad BELOW */}
           <div className="left-column">
-            <aside className="sidebar">
+            <aside className="sidebar sticky">
               <div className="search-container">
                 <input 
                   type="text" 
