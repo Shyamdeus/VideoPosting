@@ -27,6 +27,30 @@ export default function App() {
       smallAd.appendChild(script1Src);
     }
 
+    // ✅ New in-content ad BELOW video
+    const inlineAd = document.getElementById('in-content-ad');
+    if (inlineAd) {
+      const scriptInline = document.createElement('script');
+      scriptInline.type = 'text/javascript';
+      scriptInline.async = true;
+      scriptInline.innerHTML = `
+        atOptions = {
+          'key' : 'YOUR_INLINE_AD_KEY',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      `;
+      inlineAd.appendChild(scriptInline);
+
+      const scriptInlineSrc = document.createElement('script');
+      scriptInlineSrc.type = 'text/javascript';
+      scriptInlineSrc.async = true;
+      scriptInlineSrc.src = '//www.highperformanceformat.com/YOUR_INLINE_AD_KEY/invoke.js';
+      inlineAd.appendChild(scriptInlineSrc);
+    }
+
     // ✅ Bottom BIG ad
     const bottomAd = document.getElementById('bottom-ad');
     if (bottomAd) {
@@ -123,6 +147,9 @@ export default function App() {
                 className="iframe"
               ></iframe>
             </div>
+
+            {/* ✅ New in-content ad BELOW video */}
+            <div id="in-content-ad"></div>
 
             <div className="video-bottom-section">
               <p className="video-section-text">
