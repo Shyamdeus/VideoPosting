@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from './components/Footer'; // adjust the path if needed
+import Footer from '../components/Footer'; // ← FIXED PATH
 
 export default function Home() {
   return (
@@ -20,7 +20,6 @@ export default function Home() {
         This is your homepage description.
       </p>
 
-      {/* ✅ Footer with banner ad */}
       <Footer />
     </>
   );
