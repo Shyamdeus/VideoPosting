@@ -42,13 +42,15 @@ export default function Home() {
           className="iframe"
         ></iframe>
       </div>
+      
+      <p className="description">
+        This is your homepage description.
+      </p>
 
       {/* ✅ Ad banner under video */}
       <div id="video-banner" style={{ margin: '20px 0' }}></div>
 
-      <p className="description">
-        This is your homepage description.
-      </p>
+      
 
       <Footer />
     </>
