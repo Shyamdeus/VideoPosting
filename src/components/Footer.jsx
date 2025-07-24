@@ -2,37 +2,18 @@ import React, { useEffect } from 'react';
 
 export default function Footer() {
   useEffect(() => {
-    const footerAd = document.getElementById('footer-ad');
-    if (footerAd && !footerAd.hasChildNodes()) {
-      // ✅ Footer ad atOptions config
-      const scriptOptions = document.createElement('script');
-      scriptOptions.type = 'text/javascript';
-      scriptOptions.innerHTML = `
-        atOptions = {
-          'key' : '3f8144b431f600ec621cc5cffe2afa15',
-          'format' : 'iframe',
-          'height' : 90,
-          'width' : 728,
-          'params' : {}
-        };
-      `;
-      footerAd.appendChild(scriptOptions);
+    // 👉 Inject the onclckmn.com async script in the footer
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://js.onclckmn.com/static/onclicka.js';
+    script.setAttribute('data-admpid', '352763');
 
-      // ✅ Footer ad invoke script
-      const scriptInvoke = document.createElement('script');
-      scriptInvoke.type = 'text/javascript';
-      scriptInvoke.async = true;
-      scriptInvoke.src = '//www.highperformanceformat.com/3f8144b431f600ec621cc5cffe2afa15/invoke.js';
-      footerAd.appendChild(scriptInvoke);
-    }
+    document.body.appendChild(script);
   }, []);
 
   return (
     <footer style={{ marginTop: '40px', padding: '20px', backgroundColor: '#f5f5f5' }}>
       <p>Footer content here</p>
-
-      {/* ✅ Footer ad */}
-      <div id="footer-ad" style={{ marginTop: '20px' }}></div>
     </footer>
   );
 }
