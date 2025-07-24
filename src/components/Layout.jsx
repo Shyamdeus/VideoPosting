@@ -50,7 +50,7 @@ export default function Layout() {
       <main className="main">
         <div className="content-layout">
           <div className="left-column">
-            <Sidebar />
+            
           </div>
 
           <div className="video-content">
