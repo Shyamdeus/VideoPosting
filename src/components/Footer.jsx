@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <footer style={{ marginTop: '40px', padding: '20px', backgroundColor: '#f5f5f5' }}>
-      <p>Footer content here</p>
+      <div data-banner-id="6083541"></div>
     </footer>
   );
 }
