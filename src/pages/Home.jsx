@@ -39,7 +39,11 @@ export default function Home() {
         ></iframe>
       </div>
 
+      {/* Existing inline ad */}
       <div id="in-content-ad"></div>
+
+      {/* New banner below it */}
+      <div data-banner-id="6083541" style={{ marginTop: '20px' }}></div>
 
       <p className="description">
         This is your homepage description.
