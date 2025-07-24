@@ -4,7 +4,7 @@ export default function Footer() {
   useEffect(() => {
     const footerAd = document.getElementById('footer-ad');
     if (footerAd && !footerAd.hasChildNodes()) {
-      // Set the atOptions config
+      // ✅ Footer ad atOptions config
       const scriptOptions = document.createElement('script');
       scriptOptions.type = 'text/javascript';
       scriptOptions.innerHTML = `
@@ -18,7 +18,7 @@ export default function Footer() {
       `;
       footerAd.appendChild(scriptOptions);
 
-      // Load the invoke.js for this key
+      // ✅ Footer ad invoke script
       const scriptInvoke = document.createElement('script');
       scriptInvoke.type = 'text/javascript';
       scriptInvoke.async = true;
@@ -31,7 +31,7 @@ export default function Footer() {
     <footer style={{ marginTop: '40px', padding: '20px', backgroundColor: '#f5f5f5' }}>
       <p>Footer content here</p>
 
-      {/* ✅ Ad placeholder */}
+      {/* ✅ Footer ad */}
       <div id="footer-ad" style={{ marginTop: '20px' }}></div>
     </footer>
   );
